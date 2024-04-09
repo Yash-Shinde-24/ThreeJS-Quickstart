@@ -23,6 +23,12 @@ document.body.appendChild(renderer.domElement);
 // OrbitControls
 
 // Load a GLTF model
+const loader = new GLTFLoader();
+loader.load('models/apple_vision_pro/scene.gltf', function (gltf) {
+    scene.add(gltf.scene);
+}, undefined, function (error) {
+    console.error('An error happened:', error);
+});
 
 // Animation Loop
 function animate() {
