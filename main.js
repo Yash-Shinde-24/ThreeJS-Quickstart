@@ -22,7 +22,8 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(0, 1, 0);
 scene.add(directionalLight);
 // Bonus
-
+const hemiLight = new THREE.HemisphereLight(0xB1E1FF, 0x080820, 1);
+scene.add(hemiLight);
 
 // OrbitControls
 
