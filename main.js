@@ -26,6 +26,7 @@ const hemiLight = new THREE.HemisphereLight(0xB1E1FF, 0x080820, 1);
 scene.add(hemiLight);
 
 // OrbitControls
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // Load a GLTF model
 const loader = new GLTFLoader();
