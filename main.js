@@ -28,6 +28,10 @@ scene.add(hemiLight);
 // OrbitControls
 const controls = new OrbitControls(camera, renderer.domElement);
 
+// Bonus Auto Rotate
+controls.autoRotate = true; // Enable auto-rotate
+controls.autoRotateSpeed = 5.0; // Adjust the rotation speed as needed
+
 // Load a GLTF model
 const loader = new GLTFLoader();
 loader.load('models/apple_vision_pro/scene.gltf', function (gltf) {
@@ -39,6 +43,7 @@ loader.load('models/apple_vision_pro/scene.gltf', function (gltf) {
 // Animation Loop
 function animate() {
     requestAnimationFrame(animate);
+    controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
     renderer.render(scene, camera);
 }
 animate();
