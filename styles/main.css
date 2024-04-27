@@ -1,7 +1,27 @@
 body {
     margin: 0;
+    color: rgb(20, 20, 20);
+    font-family: 'Roboto';
+}
+
+.overlay {
+    position: absolute;
+    top: 50px   ;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
 }
 
 canvas {
     display: block;
+}
+
+h1 {
+    font-size: 48px;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    
 }
